@@ -80,7 +80,7 @@ def forward_accelerate_to(current_power, max_power):
         current_power = 2
 
     while current_power != max_power:
-        # Calculation of acceleration using doubling time
+        # Calculation of acceleration using exponential time
         current_power = int(current_power * (2 ** growth_rate))
         # Checks to ensure that the value is not missed
         if current_power > max_power:
@@ -101,7 +101,7 @@ def reverse_accelerate_to(current_power, max_power):
         current_power = -2
 
     while current_power != max_power:
-        # Calculation of acceleration using doubling time
+        # Calculation of acceleration using exponential time
         current_power = current_power * (growth_rate ** time)
         # Checks to ensure that the value is not missed
         if current_power < max_power:
